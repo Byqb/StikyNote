@@ -1,6 +1,6 @@
 body{
-    background-color: #928a8a;
-    font-family:monospace ;
+    background-color: #494b52;
+    font-family: 'Segoe UI', sans-serif;
     margin: 0;
 }
 
@@ -8,76 +8,99 @@ main{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-image:
-    repeating-linear-gradient(
-    to left,
-    transparent 0 50px,
-    #000 50px 51px
-    ),
-    repeating-linear-gradient(
-        to botoq,
-        transparent 0 50px,
-        #000 50px 51px
-        );
+    background-image: 
+        radial-gradient(#00000015 1px, transparent 1px),
+        radial-gradient(#00000015 1px, transparent 1px);
+    background-size: 20px 20px;
     position: relative;
 }
 
 form {
-    background-color: bisque;
+    background-color: rgba(255, 255, 255, 0.349);
     width: max-content;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 24px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 12px;
     display: flex;
-    gap: 10px;
+    gap: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-form input:not([id=msg_type]), button{
-   width: 30px;
-    height: 30px;
+form input:not([id=msg_type]), button {
+    width: 40px;
+    height: 40px;
     border: none;
-    background-color: transparent;
-    font-size: pointer;
+    border-radius: 8px;
     cursor: pointer;
+    transition: transform 0.2s;
 }
-form input#msg_type{
+
+form input#msg_type {
     border: none;
-    background-color: transparent;
+    background-color: #f0f2f5;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 200px;
 }
 
-#list textarea{
+#createBtn {
+    background-color: #6851f0;
+    color: white;
+    font-weight: bold;
+}
+
+#createBtn:hover {
+    transform: scale(1.05);
+}
+
+#list textarea {
     all: unset;
-    color: turquoise;
+    color: #333;
     resize: both;
+    min-width: 200px;
+    min-height: 100px;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
-#list .note{
-    background-color: #000;
+#list .note {
+    background-color: white;
     width: max-content;
-    border-top: 30px solid #1a004b;
-    border-radius: 10px;
-    box-shadow: 0 20px 50px #0004;
-    padding: 10px;
+    border-top: 30px solid #6851f0;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 16px;
     position: absolute;
     top: 130px;
     left: 50px;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-#list .note span:nth-child(1){
+#list .note:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+#list .note span:nth-child(1) {
     position: absolute;
     bottom: 100%;
     right: 0;
     height: 30px;
-    font-family: cursive;
-    font-size: large;
-    padding-right: 10px;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 0 12px;
     cursor: pointer;
+    color: white;
+    line-height: 30px;
 }
-#list .note span:nth-child(2){
+
+#list .note span:nth-child(2) {
     position: absolute;
     bottom: 100%;
-    left: 10px;
-    color: azure;
-    font-family: cursive;
-    font-size: large;
+    left: 12px;
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 30px;
 }
