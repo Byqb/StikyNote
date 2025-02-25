@@ -1,0 +1,83 @@
+body{
+    background-color: #928a8a;
+    font-family:monospace ;
+    margin: 0;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image:
+    repeating-linear-gradient(
+    to left,
+    transparent 0 50px,
+    #000 50px 51px
+    ),
+    repeating-linear-gradient(
+        to botoq,
+        transparent 0 50px,
+        #000 50px 51px
+        );
+    position: relative;
+}
+
+form {
+    background-color: bisque;
+    width: max-content;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 24px;
+    display: flex;
+    gap: 10px;
+}
+
+form input:not([id=msg_type]), button{
+   width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    font-size: pointer;
+    cursor: pointer;
+}
+form input#msg_type{
+    border: none;
+    background-color: transparent;
+}
+
+#list textarea{
+    all: unset;
+    color: turquoise;
+    resize: both;
+}
+
+#list .note{
+    background-color: #000;
+    width: max-content;
+    border-top: 30px solid #1a004b;
+    border-radius: 10px;
+    box-shadow: 0 20px 50px #0004;
+    padding: 10px;
+    position: absolute;
+    top: 130px;
+    left: 50px;
+}
+
+#list .note span:nth-child(1){
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    height: 30px;
+    font-family: cursive;
+    font-size: large;
+    padding-right: 10px;
+    cursor: pointer;
+}
+#list .note span:nth-child(2){
+    position: absolute;
+    bottom: 100%;
+    left: 10px;
+    color: azure;
+    font-family: cursive;
+    font-size: large;
+}
